@@ -35,26 +35,6 @@ namespace SpaceParkTestProject
             Assert.Equal(6500, result);
         }
 
-        [Fact]
-        public async Task GetShipLength_Expect_Length()
-        {
-            var swApi = new SwApi();
-            var result = await swApi.GetShipLength("x-wing");
-
-            Assert.Equal(12.5, result);
-        }
-
-        [Fact]
-        public async Task GetSpaceTraveller_Expect_Starships()
-        {
-            var swApi = new SwApi();
-            var listOfShips = new List<string>
-            { "http://swapi.dev/api/starships/12/", "http://swapi.dev/api/starships/22/" };
-            var result = await swApi.GetSpaceTraveller("Luke skywalker");
-
-            Assert.Equal(listOfShips, result.StarShips);
-            Assert.NotNull(result);
-        }
 
         [Fact]
         public async Task GetSpaceTraveller_InvalidName_Expect_Exception_Message()
