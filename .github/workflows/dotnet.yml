@@ -2,9 +2,9 @@ name: .NET
 
 on:
   push:
-    branches: [ main ]
+    
   pull_request:
-    branches: [ main ]
+
 
 jobs:
   build:
@@ -20,6 +20,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore Source/SpacePark.sln
     - name: Test
       run: dotnet test --no-build --verbosity normal
