@@ -1,16 +1,16 @@
-name: .NET
+name: .NET # Namnet på min workflow
 
-on:
+on: # Namnet på GitHub-händelsen som aktiverar/trigger min workflow
   push:
     
 
 
-jobs:
-  build:
+jobs: # Anger vad som ska göras 
+  build: # Bygger en solution 
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Anger i vilken miljö en solution ska byggas 
 
-    steps:
+    steps: # Beskriving av steg som skall utföras 
     - uses: actions/checkout@v2
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
